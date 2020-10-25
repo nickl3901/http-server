@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'ca.capstone.http.Main'
+        )
+    }
+}
+
+application {
+    mainClass = 'ca.capstone.http.Main'
+}
+
+version = "0.0.1" 
+
