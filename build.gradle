@@ -11,7 +11,7 @@ java {
 jar {
     manifest {
         attributes(
-            'Main-Class': 'ca.capstone.http.Main'
+            'Main-Class': 'ca.capstone.http.HttpServer'
         )
     }
 }
