@@ -31,7 +31,7 @@ public class HttpController {
 
 			@Override
 			public InputStream file() {
-				return HttpController.class.getResourceAsStream(httpRequest.getPath());
+				return HttpController.class.getClassLoader().getResourceAsStream(httpRequest.getPath());
 			}
 		};
 
