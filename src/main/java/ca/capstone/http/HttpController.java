@@ -1,5 +1,6 @@
 package ca.capstone.http;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 public class HttpController {
@@ -18,20 +19,23 @@ public class HttpController {
 		// HttpController.class.getClassLoader().getResourceAsStream() or you can use the java.io.File to
 		// point to a location on your filesystem
 		// feel free to use something like this:
-		/**
+
 		return new HttpResponse() {
 			@Override
 			public String contentType() {
-				return null; // This is f
+				if (httpRequest.getPath().endsWith(".jpg")) {
+					return "applciation/octet-stream";
+				}
+				return "text/html";
 			}
 
 			@Override
 			public InputStream file() {
-				return null;
+				return HttpController.class.getResourceAsStream(httpRequest.getPath());
 			}
 		};
-		 */
-		throw new UnsupportedOperationException("TO BE IMPLEMENTED");
+
+
 	}
 	
 }

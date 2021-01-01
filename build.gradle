@@ -17,7 +17,7 @@ jar {
 }
 
 application {
-    mainClass = 'ca.capstone.http.Main'
+    mainClass = 'ca.capstone.http.HttpServer'
 }
 
 version = "0.0.1" 
