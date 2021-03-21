@@ -11,13 +11,13 @@ java {
 jar {
     manifest {
         attributes(
-            'Main-Class': 'ca.capstone.http.Main'
+            'Main-Class': 'ca.capstone.http.HttpServer'
         )
     }
 }
 
 application {
-    mainClass = 'ca.capstone.http.Main'
+    mainClass = 'ca.capstone.http.HttpServer'
 }
 
 version = "0.0.1" 
