@@ -1,7 +1,6 @@
 package ca.capstone.http;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
+import java.io.*;
 
 public class HttpController {
 
@@ -31,7 +30,11 @@ public class HttpController {
 
 			@Override
 			public InputStream file() {
-				return HttpController.class.getClassLoader().getResourceAsStream(httpRequest.getPath());
+				try {
+					return new FileInputStream("/Users/nickolasliu/Capstone/"+httpRequest.getPath());
+				} catch (IOException e) {
+					throw new UncheckedIOException(e);
+				}
 			}
 		};
 
