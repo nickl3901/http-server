@@ -31,7 +31,7 @@ public class HttpController {
 			@Override
 			public InputStream file() {
 				try {
-					return new FileInputStream("/Users/nickolasliu/Capstone/"+httpRequest.getPath());
+					return new FileInputStream(System.getProperty("user.home")+"/Capstone/"+httpRequest.getPath());
 				} catch (IOException e) {
 					throw new UncheckedIOException(e);
 				}
